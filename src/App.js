@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Login from './Login';
 import Home from './Home';
+import CreateProduct from './CreateProduct';
 
 const PrivateRoute = ({ children }) => {
   const isAuthenticated = localStorage.getItem('isAuthenticated');
@@ -16,6 +17,11 @@ const App = () => {
         <Route path="/home" element={
           <PrivateRoute>
             <Home />
+          </PrivateRoute>
+        } />
+        <Route path="/create-product" element={
+          <PrivateRoute>
+            <CreateProduct />
           </PrivateRoute>
         } />
       </Routes>
