@@ -7,7 +7,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [viewMode, setViewMode] = useState('grid'); // Estado para alternar entre lista e grade
+  const [viewMode, setViewMode] = useState('grid');
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -39,7 +39,6 @@ const Home = () => {
     navigate('/');
   };
 
-  // Função para alternar a visualização
   const toggleViewMode = () => {
     setViewMode((prevMode) => (prevMode === 'grid' ? 'list' : 'grid'));
   };
