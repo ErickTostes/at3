@@ -34,7 +34,7 @@ const Login = () => {
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem('token', data.token); // Armazene o token retornado
+        localStorage.setItem('token', data.token);
         navigate('/home');
       } else {
         setError(data.message || 'Erro ao fazer login. Tente novamente.');

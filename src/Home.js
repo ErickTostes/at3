@@ -47,6 +47,7 @@ const Home = () => {
     <div className="home-container">
       <h1>Bem-vindo à Página Inicial!</h1>
       <button onClick={handleLogout}>Logout</button>
+      <button onClick={() => navigate('/create-product')}>Criar Produto</button>
       <button onClick={toggleViewMode}>
         Alternar para {viewMode === 'grid' ? 'Lista' : 'Grade'}
       </button>
